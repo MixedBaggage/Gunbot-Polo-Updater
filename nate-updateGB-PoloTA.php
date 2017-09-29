@@ -373,8 +373,8 @@ $pHelpCoins = array_flip($pHelpCoins);
 //print_r($pHighCoins);
 
 
-$pHighStrat['BTC_TRADING_LIMIT'] = (float)$pHighBuyAmount;
-$pMedStrat['BTC_TRADING_LIMIT'] = (float)$pMedBuyAmount;
+$pHighStrat['TRADING_LIMIT'] = (float)$pHighBuyAmount;
+$pMedStrat['TRADING_LIMIT'] = (float)$pMedBuyAmount;
 
 if(fnmatch("*stepgain*",$pHighStrategy)){
 	$pHighStrat['SELLLVL1'] = (float)$pHighSELLLVL1;
@@ -533,8 +533,8 @@ $bHelpCoins = array_flip($bHelpCoins);
 //print_r($bHighCoinNames);
 //print_r($bMedCoinNames);
 
-$bHighStrat['BTC_TRADING_LIMIT'] = (float)$bHighBuyAmount;
-$bMedStrat['BTC_TRADING_LIMIT'] = (float)$bMedBuyAmount;
+$bHighStrat['TRADING_LIMIT'] = (float)$bHighBuyAmount;
+$bMedStrat['TRADING_LIMIT'] = (float)$bMedBuyAmount;
 
 if(fnmatch("*stepgain*",$bHighStrategy)){
         $bHighStrat['SELLLVL1'] = (float)$bHighSELLLVL1;
