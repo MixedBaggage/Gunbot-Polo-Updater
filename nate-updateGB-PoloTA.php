@@ -17,7 +17,7 @@ $bSec = "";
 ////config path uncomment and adjust for your OS/Location
 //$cpath = '/var/www/config/config.js';  //// Linux
 
-$cpath = 'C:\gb405\config.js'; //// Windows
+$cpath = 'C:\GUNBOT_V5_0_\config.js'; //// Windows
 
 ///////////////////////////////Poloniex//////////////////////////////////////////////////
 ///High Level Coins
@@ -45,17 +45,17 @@ $pManualConfig = array();
 //////////////////////////////////Bittrex//////////////////////////////////////////////////
 ///High Level Coins
 $bHighVolumeMin = '1200'; ///// Min Volume in BTC over 24hr to consider HIGH coin
-$bHighStrategy = 'bbstepgain'; //// High Coin Strategy
-$bHighBuyAmount = '.08'; //// High Coin Buy Amount
+$bHighStrategy = 'stepgain'; //// High Coin Strategy
+$bHighBuyAmount = '.015'; //// High Coin Buy Amount
 ////For SG Sell Only
 $bHighSELLLVL1 = '2'; ////High Coin SG lvl1
 $bHighSELLLVL2 = '2.5'; ////High Coin SG lvl2
 $bHighSELLLVL3 = '70'; ////High Coin SG lvl3
 
 ///Medium Level Coins
-$bMedVolumeMin = '800'; ///// Min Volume in BTC over 24hr to consider MEDIUM coin
-$bMedStrategy = 'bbstepgain'; //// Med Coin Strategy
-$bMedBuyAmount = '.05'; //// Med Coin Buy Amount
+$bMedVolumeMin = '600'; ///// Min Volume in BTC over 24hr to consider MEDIUM coin
+$bMedStrategy = 'stepgain'; //// Med Coin Strategy
+$bMedBuyAmount = '.01'; //// Med Coin Buy Amount
 //// For SG Sell Only
 $bMedSELLLVL1 = '1'; ////Med Coin SG lvl1
 $bMedSELLLVL2 = '1.5'; ////Med Coin SG lvl2
@@ -67,7 +67,7 @@ $bManualConfig = array();
 
 ///Put your Override settings here for Help Coins -- Coins you own but no longer meet the min volume.
 $overrideStrategy = 'stepgain'; ////Help Coin Strategy
-$override = array( 'SELLLVL1'=> 0.8,'SELLLVL'=>1, 'BUY_ENABLED'=>false ); ////Help Coin Override Settings
+$override = array( 'SELLLVL1'=> 0.7,'SELLLVL'=>1, 'BUY_ENABLED'=>false ); ////Help Coin Override Settings
 
 ///////////////////////////////////////////////////////
 ///////////////////////////////////////////////////////
@@ -373,8 +373,8 @@ $pHelpCoins = array_flip($pHelpCoins);
 //print_r($pHighCoins);
 
 
-$pHighStrat['BTC_TRADING_LIMIT'] = (float)$pHighBuyAmount;
-$pMedStrat['BTC_TRADING_LIMIT'] = (float)$pMedBuyAmount;
+$pHighStrat['TRADING_LIMIT'] = (float)$pHighBuyAmount;
+$pMedStrat['TRADING_LIMIT'] = (float)$pMedBuyAmount;
 
 if(fnmatch("*stepgain*",$pHighStrategy)){
 	$pHighStrat['SELLLVL1'] = (float)$pHighSELLLVL1;
@@ -533,8 +533,8 @@ $bHelpCoins = array_flip($bHelpCoins);
 //print_r($bHighCoinNames);
 //print_r($bMedCoinNames);
 
-$bHighStrat['BTC_TRADING_LIMIT'] = (float)$bHighBuyAmount;
-$bMedStrat['BTC_TRADING_LIMIT'] = (float)$bMedBuyAmount;
+$bHighStrat['TRADING_LIMIT'] = (float)$bHighBuyAmount;
+$bMedStrat['TRADING_LIMIT'] = (float)$bMedBuyAmount;
 
 if(fnmatch("*stepgain*",$bHighStrategy)){
         $bHighStrat['SELLLVL1'] = (float)$bHighSELLLVL1;
