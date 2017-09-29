@@ -31,3 +31,5 @@ For exemptions. Set the configuration for your manual coins in your config.js. A
 If you like my work, I don't drink sooo buy me a Starbucks?<br/>
 <b>BTC:</b> 1EbMRKN6eF8DJMA114E8Hx6JWyzX8YvN65 <br/>
 <b>ETH:</b> 0xB0cF532D96Ca3cf53484FA5c788A1627568Bb942
+
+Not my code, I have just edited file to work with 5.0.5.
